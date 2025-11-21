@@ -385,7 +385,7 @@ export default function Home() {
                 {/* Testimonio 1 */}
                 <div>
                   <p className="text-[#333333] text-base md:text-lg leading-relaxed italic mb-4 font-serif">
-                    "Estoy agradecido con Ismail y su equipo, me apoyaron en cada paso de todo el proceso. Son receptivos, profesionales y, lo que es más importante, tienen una profunda experiencia en el área de inmigración. Los recomiendo encarecidamente a cualquiera que se ocupe de problemas de inmigración. En el futuro trabajaré con ellos con confianza".
+                    &ldquo;Estoy agradecido con Ismail y su equipo, me apoyaron en cada paso de todo el proceso. Son receptivos, profesionales y, lo que es más importante, tienen una profunda experiencia en el área de inmigración. Los recomiendo encarecidamente a cualquiera que se ocupe de problemas de inmigración. En el futuro trabajaré con ellos con confianza&rdquo;.
                   </p>
                   <p className="text-[#666666] text-sm md:text-base font-sans">
                     — Apoyo excepcional a la inmigración
@@ -395,7 +395,7 @@ export default function Home() {
                 {/* Testimonio 2 */}
                 <div>
                   <p className="text-[#333333] text-base md:text-lg leading-relaxed italic mb-4 font-serif">
-                    "He estado trabajando con Ismail y su increíble equipo durante unos dos años y gracias a ellos. Obtuve mi tarjeta verde hace un mes. En primer lugar, lo que más me satisface es que puedo llegar a ellos constantemente y obtener una respuesta inmediata. Cuando era necesario, obtenía una respuesta fuera del trabajo, lo cual era muy importante para mí. Aunque a veces hay detalles finos en mi caso, Ismail me guió de la manera más correcta, le estoy muy agradecido a él y a su equipo. Me alegro de haber trabajado con ellos".
+                    &ldquo;He estado trabajando con Ismail y su increíble equipo durante unos dos años y gracias a ellos. Obtuve mi tarjeta verde hace un mes. En primer lugar, lo que más me satisface es que puedo llegar a ellos constantemente y obtener una respuesta inmediata. Cuando era necesario, obtenía una respuesta fuera del trabajo, lo cual era muy importante para mí. Aunque a veces hay detalles finos en mi caso, Ismail me guió de la manera más correcta, le estoy muy agradecido a él y a su equipo. Me alegro de haber trabajado con ellos&rdquo;.
                   </p>
                   <p className="text-[#666666] text-sm md:text-base font-sans">
                     — Adquisición exitosa de la tarjeta verde
@@ -410,7 +410,7 @@ export default function Home() {
                 {/* Testimonio 3 */}
                 <div>
                   <p className="text-[#333333] text-base md:text-lg leading-relaxed italic mb-4 font-serif">
-                    "La comunicación fue genial | nunca tuve una pregunta sin respuesta. El proceso para mi naturalización fue sencillo y no tomó más de 6 meses, no tenía tarifas ocultas, todo fue sencillo. Hildana fue increíble, así que estuvo disponible siempre que necesite respuestas a alguna pregunta, realmente aprecio trabajar con el bufete de abogados I.S, definitivamente lo recomendaría a cualquiera que esté buscando comenzar su proceso de naturalización".
+                    &ldquo;La comunicación fue genial | nunca tuve una pregunta sin respuesta. El proceso para mi naturalización fue sencillo y no tomó más de 6 meses, no tenía tarifas ocultas, todo fue sencillo. Hildana fue increíble, así que estuvo disponible siempre que necesite respuestas a alguna pregunta, realmente aprecio trabajar con el bufete de abogados I.S, definitivamente lo recomendaría a cualquiera que esté buscando comenzar su proceso de naturalización&rdquo;.
                   </p>
                   <p className="text-[#666666] text-sm md:text-base font-sans">
                     — Gran experiencia trabajando con el bufete de abogados I.S.
@@ -420,7 +420,7 @@ export default function Home() {
                 {/* Testimonio 4 */}
                 <div>
                   <p className="text-[#333333] text-base md:text-lg leading-relaxed italic mb-4 font-serif">
-                    "Un equipo de abogados amables y competentes en el que todos pueden confiar. Un alto grado de profesionalismo y un excelente manejo de casos exigentes, especialmente a través de ER y auditorías complicadas. Brillante representación a través del largo proceso de Certificación Laboral y PERM. Tener el conocimiento, la experiencia y el gran esfuerzo para lograr resultados positivos. Muy agradecido".
+                    &ldquo;Un equipo de abogados amables y competentes en el que todos pueden confiar. Un alto grado de profesionalismo y un excelente manejo de casos exigentes, especialmente a través de ER y auditorías complicadas. Brillante representación a través del largo proceso de Certificación Laboral y PERM. Tener el conocimiento, la experiencia y el gran esfuerzo para lograr resultados positivos. Muy agradecido&rdquo;.
                   </p>
                   <p className="text-[#666666] text-sm md:text-base font-sans">
                     — Abogados confiables y profesionales
