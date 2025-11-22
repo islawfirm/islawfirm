@@ -245,12 +245,12 @@ export default function Home() {
             </Link>
 
             {/* Noticia 2 */}
-            <Link href="/noticias" className="group">
+            <Link href="/noticias/h1b-100000-fee" className="group">
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-full flex flex-col">
                 <div className="relative w-full h-56 md:h-64 overflow-hidden">
                   <Image
                     src="/images/proclamacion.avif"
-                    alt="Noticia sobre proclamación"
+                    alt="Nueva Proclamación sobre tarifa de $100,000 para peticiones H-1B"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -262,10 +262,10 @@ export default function Home() {
                     </span>
                   </div>
                   <h3 className="text-[#8B0000] text-lg md:text-xl font-serif font-bold mb-2 group-hover:text-[#8B0000] transition-colors line-clamp-2">
-                    Noticia Legal
+                    Nueva Tarifa de $100,000 para Peticiones H-1B
                   </h3>
                   <p className="text-[#666666] text-sm md:text-base leading-relaxed mb-4 flex-grow line-clamp-3">
-                    Manténgase informado sobre las últimas actualizaciones legales y cambios en la legislación que pueden afectar su caso.
+                    El 19 de septiembre de 2025, el Presidente Trump firmó una Proclamación que requiere un pago de $100,000 para nuevas peticiones H-1B. Descubra cómo esto afecta a empleadores y trabajadores.
                   </p>
                   <div className="flex items-center text-[#8B0000] font-semibold text-sm group-hover:text-[#8B0000] transition-colors">
                     <span>Leer más</span>
@@ -278,12 +278,12 @@ export default function Home() {
             </Link>
 
             {/* Noticia 3 */}
-            <Link href="/noticias" className="group">
+            <Link href="/noticias/uscis-new-payment-option" className="group">
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-full flex flex-col">
                 <div className="relative w-full h-56 md:h-64 overflow-hidden">
                   <Image
                     src="/images/pago.avif"
-                    alt="Noticia sobre pago"
+                    alt="Nueva opción de pago de USCIS desde cuenta bancaria"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -295,10 +295,10 @@ export default function Home() {
                     </span>
                   </div>
                   <h3 className="text-[#8B0000] text-lg md:text-xl font-serif font-bold mb-2 group-hover:text-[#8B0000] transition-colors line-clamp-2">
-                    Noticia Legal
+                    Nueva Opción de Pago de USCIS desde Cuenta Bancaria
                   </h3>
                   <p className="text-[#666666] text-sm md:text-base leading-relaxed mb-4 flex-grow line-clamp-3">
-                    Manténgase informado sobre las últimas actualizaciones legales y cambios en la legislación que pueden afectar su caso.
+                    USCIS ahora permite pagar las tarifas de inmigración directamente desde una cuenta bancaria estadounidense. A partir del 28 de octubre de 2025, ya no se aceptarán cheques en papel.
                   </p>
                   <div className="flex items-center text-[#8B0000] font-semibold text-sm group-hover:text-[#8B0000] transition-colors">
                     <span>Leer más</span>
