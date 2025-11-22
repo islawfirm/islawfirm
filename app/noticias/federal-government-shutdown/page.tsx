@@ -332,7 +332,7 @@ export default function FederalGovernmentShutdownPage() {
 
               <div className="bg-gray-50 border-l-4 border-[#8B0000] p-6 rounded-r-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  ¿USCIS está "cerrado" durante un cierre?
+                  ¿USCIS está &ldquo;cerrado&rdquo; durante un cierre?
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
                   No. USCIS está financiado por tarifas y continúa procesando casos. Algunos casos aún pueden verse afectados indirectamente si requieren pasos del DOL (por ejemplo, LCAs, PERM).
