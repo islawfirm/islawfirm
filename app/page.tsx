@@ -212,12 +212,12 @@ export default function Home() {
           {/* Grid de noticias */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
             {/* Noticia 1 */}
-            <Link href="/noticias" className="group">
+            <Link href="/noticias/federal-government-shutdown" className="group">
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-full flex flex-col">
                 <div className="relative w-full h-56 md:h-64 overflow-hidden">
                   <Image
                     src="/images/cierre.avif"
-                    alt="Noticia sobre cierre"
+                    alt="Cierre del Gobierno Federal y su impacto en la inmigración"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -229,10 +229,10 @@ export default function Home() {
                     </span>
                   </div>
                   <h3 className="text-[#8B0000] text-lg md:text-xl font-serif font-bold mb-2 group-hover:text-[#8B0000] transition-colors line-clamp-2">
-                    Noticia Legal
+                    Cierre del Gobierno Federal: Impacto en la Inmigración
                   </h3>
                   <p className="text-[#666666] text-sm md:text-base leading-relaxed mb-4 flex-grow line-clamp-3">
-                    Manténgase informado sobre las últimas actualizaciones legales y cambios en la legislación que pueden afectar su caso.
+                    Un cierre del gobierno federal comenzó el 1 de octubre de 2025. Descubra qué servicios de inmigración continúan operando y cuáles están en pausa, y qué pasos prácticos debe tomar ahora.
                   </p>
                   <div className="flex items-center text-[#8B0000] font-semibold text-sm group-hover:text-[#8B0000] transition-colors">
                     <span>Leer más</span>
