@@ -6,8 +6,8 @@ import Link from 'next/link';
 export default function FloatingButton() {
   const pathname = usePathname();
   
-  // No mostrar el botón en la página de revisar-estado
-  if (pathname === '/revisar-estado') {
+  // No mostrar el botón en la página de revisar-estado ni en el panel de admin
+  if (pathname === '/revisar-estado' || pathname.startsWith('/admin')) {
     return null;
   }
 

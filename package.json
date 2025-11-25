@@ -6,23 +6,42 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "prisma:test": "node scripts/test-connection.js",
+    "admin:create": "node scripts/create-admin-direct.js",
+    "admin:create-api": "node scripts/create-admin-simple.js",
+    "admin:insert": "node scripts/insert-admin.js"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.939.0",
+    "@aws-sdk/s3-request-presigner": "^3.939.0",
+    "@prisma/adapter-pg": "^7.0.0",
+    "@prisma/client": "^7.0.0",
+    "bcryptjs": "^3.0.3",
+    "date-fns": "^4.1.0",
+    "next": "^14.2.5",
+    "pg": "^8.16.3",
+    "prisma": "^7.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "next": "^14.2.5"
+    "recharts": "^3.5.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20.14.12",
+    "@types/pg": "^8.15.6",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "typescript": "^5.5.4",
-    "tailwindcss": "^3.4.7",
-    "postcss": "^8.4.40",
     "autoprefixer": "^10.4.19",
+    "dotenv": "^17.2.3",
     "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.5"
+    "eslint-config-next": "^14.2.5",
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.7",
+    "tsx": "^4.20.6",
+    "typescript": "^5.5.4"
   }
 }
-

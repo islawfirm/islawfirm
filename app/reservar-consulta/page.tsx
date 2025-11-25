@@ -13,8 +13,25 @@ export default function ReservarConsulta() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simular envío del formulario
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    const formData = new FormData(e.currentTarget);
+    const nombre = formData.get('nombre') as string;
+    const email = formData.get('email') as string;
+    const telefono = formData.get('telefono') as string;
+    const mensaje = formData.get('mensaje') as string || 'Sin mensaje adicional';
+    
+    // Formatear mensaje para WhatsApp
+    const whatsappMessage = `*Reserva de Consulta*\n\n` +
+      `*Nombre:* ${nombre}\n` +
+      `*Email:* ${email}\n` +
+      `*Teléfono:* ${telefono}\n` +
+      `*Mensaje:* ${mensaje}`;
+    
+    // Codificar mensaje para URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/18047083837?text=${encodedMessage}`;
+    
+    // Redirigir a WhatsApp
+    window.open(whatsappUrl, '_blank');
     
     setIsSubmitting(false);
     setIsSubmitted(true);

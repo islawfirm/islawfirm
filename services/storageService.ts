@@ -3,6 +3,7 @@
 
 const STORAGE_KEY = 'islawfirm_casos';
 const STORAGE_KEY_AUTH = 'islawfirm_auth';
+const STORAGE_KEY_USER = 'islawfirm_user';
 
 export class StorageService {
   // ============ CASOS ============
@@ -76,6 +77,44 @@ export class StorageService {
       return true;
     } catch (error) {
       console.error('Error al limpiar auth:', error);
+      return false;
+    }
+  }
+
+  // ============ USUARIO ============
+  
+  static saveUser(user: { id: string; email: string; nombre: string | null }): boolean {
+    if (typeof window === 'undefined') return false;
+    
+    try {
+      localStorage.setItem(STORAGE_KEY_USER, JSON.stringify(user));
+      return true;
+    } catch (error) {
+      console.error('Error al guardar usuario:', error);
+      return false;
+    }
+  }
+
+  static getUser(): { id: string; email: string; nombre: string | null } | null {
+    if (typeof window === 'undefined') return null;
+    
+    try {
+      const data = localStorage.getItem(STORAGE_KEY_USER);
+      return data ? JSON.parse(data) : null;
+    } catch (error) {
+      console.error('Error al leer usuario:', error);
+      return null;
+    }
+  }
+
+  static clearUser(): boolean {
+    if (typeof window === 'undefined') return false;
+    
+    try {
+      localStorage.removeItem(STORAGE_KEY_USER);
+      return true;
+    } catch (error) {
+      console.error('Error al limpiar usuario:', error);
       return false;
     }
   }

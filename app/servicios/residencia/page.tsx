@@ -2,8 +2,35 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { FormEvent } from 'react';
 
 export default function ResidenciaPage() {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    const formData = new FormData(e.currentTarget);
+    const nombre = formData.get('nombre') as string;
+    const email = formData.get('email') as string;
+    const telefono = formData.get('telefono') as string || 'No proporcionado';
+    const tipoPeticion = formData.get('tipo-peticion') as string || 'No especificado';
+    const mensaje = formData.get('mensaje') as string;
+    
+    // Formatear mensaje para WhatsApp
+    const whatsappMessage = `*Formulario de Residencia*\n\n` +
+      `*Nombre:* ${nombre}\n` +
+      `*Email:* ${email}\n` +
+      `*Teléfono:* ${telefono}\n` +
+      `*Tipo de Petición:* ${tipoPeticion}\n` +
+      `*Mensaje:* ${mensaje}`;
+    
+    // Codificar mensaje para URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/18047083837?text=${encodedMessage}`;
+    
+    // Redirigir a WhatsApp
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section con imagen de fondo */}
@@ -95,7 +122,7 @@ export default function ResidenciaPage() {
           </div>
 
           {/* Formulario */}
-          <form className="bg-[#F5F0E8] rounded-xl p-8 md:p-10 lg:p-12 shadow-lg">
+          <form onSubmit={handleSubmit} className="bg-[#F5F0E8] rounded-xl p-8 md:p-10 lg:p-12 shadow-lg">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               {/* Nombre */}
               <div>

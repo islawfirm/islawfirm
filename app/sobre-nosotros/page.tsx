@@ -1,7 +1,34 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { FormEvent } from 'react';
 
 export default function SobreNosotros() {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    const formData = new FormData(e.currentTarget);
+    const nombre = formData.get('nombre') as string;
+    const email = formData.get('email') as string;
+    const telefono = formData.get('telefono') as string || 'No proporcionado';
+    const mensaje = formData.get('mensaje') as string;
+    
+    // Formatear mensaje para WhatsApp
+    const whatsappMessage = `*Formulario de Contacto - Sobre Nosotros*\n\n` +
+      `*Nombre:* ${nombre}\n` +
+      `*Email:* ${email}\n` +
+      `*Teléfono:* ${telefono}\n` +
+      `*Mensaje:* ${mensaje}`;
+    
+    // Codificar mensaje para URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/18047083837?text=${encodedMessage}`;
+    
+    // Redirigir a WhatsApp
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Primera Sección - Dos Columnas */}
@@ -152,7 +179,7 @@ export default function SobreNosotros() {
             ¿Quieres contactarte con nosotros?
           </h2>
 
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             {/* Campo Nombre */}
             <div>
               <label htmlFor="nombre" className="block text-white text-sm md:text-base font-semibold mb-2">

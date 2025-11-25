@@ -2,7 +2,7 @@
 
 export type EstadoCaso = 'En Proceso' | 'Aprobado' | 'Pendiente' | 'Rechazado' | 'Completado';
 export type TipoEvento = 'completado' | 'en-proceso' | 'pendiente';
-export type EstadoDocumento = 'aprobado' | 'pendiente' | 'rechazado';
+export type EstadoDocumento = 'aprobado' | 'pendiente' | 'rechazado' | 'sin-estado';
 
 export interface Evento {
   id?: string;
@@ -18,11 +18,13 @@ export interface Documento {
   tipo: string;
   fecha: string;
   url?: string;
-  estado: EstadoDocumento;
+  estado: EstadoDocumento | null; // null o 'sin-estado' para documentos sin estado (cédulas, pasaportes, etc.)
   // Para almacenamiento temporal (base64)
   base64?: string;
   // Para migración futura a Cloudflare
   cloudflareId?: string;
+  // Control de visibilidad: solo el cliente puede ver si es true, admin siempre puede ver todos
+  visibleParaCliente?: boolean;
 }
 
 export interface CasoInfo {

@@ -1,8 +1,35 @@
 'use client';
 
 import Link from 'next/link';
+import { FormEvent } from 'react';
 
 export default function Contacto() {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    const formData = new FormData(e.currentTarget);
+    const nombre = formData.get('nombre') as string;
+    const email = formData.get('email') as string;
+    const telefono = formData.get('telefono') as string || 'No proporcionado';
+    const asunto = formData.get('asunto') as string;
+    const mensaje = formData.get('mensaje') as string;
+    
+    // Formatear mensaje para WhatsApp
+    const whatsappMessage = `*Formulario de Contacto*\n\n` +
+      `*Nombre:* ${nombre}\n` +
+      `*Email:* ${email}\n` +
+      `*Teléfono:* ${telefono}\n` +
+      `*Asunto:* ${asunto}\n` +
+      `*Mensaje:* ${mensaje}`;
+    
+    // Codificar mensaje para URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/18047083837?text=${encodedMessage}`;
+    
+    // Redirigir a WhatsApp
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-[#F5F0E8]/30 to-white pt-20 md:pt-24">
       {/* Hero Section Mejorado */}
@@ -171,7 +198,7 @@ export default function Contacto() {
                 </p>
               </div>
               
-              <form className="bg-white rounded-2xl p-8 md:p-10 shadow-2xl border border-gray-100">
+              <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 md:p-10 shadow-2xl border border-gray-100">
                 <div className="space-y-6">
                   {/* Nombre */}
                   <div>

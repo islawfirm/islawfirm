@@ -1,0 +1,95 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Modelo principal de Caso
+model Caso {
+  id                   String   @id @default(uuid())
+  codigo               String   @unique
+  nombreCliente        String
+  tipoCaso             String
+  fechaInicio          DateTime
+  estado               String // 'En Proceso' | 'Aprobado' | 'Pendiente' | 'Rechazado' | 'Completado'
+  abogadoAsignado      String
+  emailAbogado         String
+  telefonoAbogado      String
+  ultimaActualizacion  DateTime @default(now())
+  descripcionCaso      String?  @db.Text
+  documentosPendientes String[] @default([])
+  notasAbogado         String[] @default([])
+  imagenCaso           String?
+  porcentajeProgreso   Int      @default(0)
+  fechaCreacion        DateTime @default(now())
+  fechaModificacion    DateTime @updatedAt
+  creadoPor            String?
+
+  // Relaciones
+  eventos    Evento[]
+  documentos Documento[]
+
+  @@index([codigo])
+  @@index([estado])
+  @@index([nombreCliente])
+  @@map("casos")
+}
+
+// Modelo de Eventos del Timeline
+model Evento {
+  id          String   @id @default(uuid())
+  casoId      String
+  fecha       DateTime
+  titulo      String
+  descripcion String   @db.Text
+  tipo        String // 'completado' | 'en-proceso' | 'pendiente'
+
+  // Relación
+  caso Caso @relation(fields: [casoId], references: [id], onDelete: Cascade)
+
+  @@index([casoId])
+  @@index([fecha])
+  @@map("eventos")
+}
+
+// Modelo de Documentos
+model Documento {
+  id                String   @id @default(uuid())
+  casoId            String
+  nombre            String
+  tipo              String
+  fecha             DateTime
+  url               String?
+  estado            String? // 'aprobado' | 'pendiente' | 'rechazado' | null (sin estado para cédulas, pasaportes, etc.)
+  base64            String?  @db.Text // Para almacenamiento temporal
+  cloudflareId      String? // Para migración futura a Cloudflare
+  visibleParaCliente Boolean  @default(false) // Control de visibilidad: solo admin puede ver si es false
+
+  // Relación
+  caso Caso @relation(fields: [casoId], references: [id], onDelete: Cascade)
+
+  @@index([casoId])
+  @@index([estado])
+  @@index([visibleParaCliente])
+  @@map("documentos")
+}
+
+// Modelo de Administradores
+model Admin {
+  id                 String    @id @default(uuid())
+  email              String    @unique
+  passwordHash       String // Contraseña hasheada
+  nombre             String?
+  activo             Boolean   @default(true)
+  ultimoAcceso       DateTime?
+  fechaCreacion      DateTime  @default(now())
+  fechaActualizacion DateTime  @updatedAt
+
+  @@index([email])
+  @@map("admins")
+}
