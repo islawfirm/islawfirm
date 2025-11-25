@@ -2,6 +2,39 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  // Configuración de TypeScript y ESLint
+  typescript: {
+    // En producción, ignorar errores de archivos fuera del proyecto
+    ignoreBuildErrors: process.env.NODE_ENV === 'production' ? false : false,
+  },
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
+  // Configurar webpack para excluir archivos fuera del proyecto
+  webpack: (config, { isServer }) => {
+    // Excluir archivos de AppData y otros directorios del sistema del watch
+    if (config.watchOptions) {
+      config.watchOptions.ignored = [
+        ...(Array.isArray(config.watchOptions.ignored) ? config.watchOptions.ignored : []),
+        '**/node_modules/**',
+        '**/.next/**',
+        '**/AppData/**',
+        '**/Cursor/**',
+        '**/.cursor/**',
+      ];
+    } else {
+      config.watchOptions = {
+        ignored: [
+          '**/node_modules/**',
+          '**/.next/**',
+          '**/AppData/**',
+          '**/Cursor/**',
+          '**/.cursor/**',
+        ],
+      };
+    }
+    return config;
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [

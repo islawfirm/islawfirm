@@ -1,0 +1,6 @@
+AppData/
+Cursor/
+.cursor/
+*.log
+.DS_Store
+
