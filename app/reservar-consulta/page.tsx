@@ -260,7 +260,7 @@ export default function ReservarConsulta() {
                 ¿Cómo funciona la reserva de una consulta?
               </h3>
               <p className="text-[#000000] text-base md:text-lg leading-relaxed">
-                Se le dará un enlace seguro a través de nuestro sistema de administración de casos donde puede elegir una fecha y hora disponibles, procesar el pago en línea y reservar su consulta. El calendario se basa en el orden de llegada y la disponibilidad de nuestro abogado. El abogado se comunicará con usted en la fecha y hora de su consulta. Si tiene alguna pregunta, puede enviarnos un correo electrónico a law@islawfirm.com.
+                Se le dará un enlace seguro a través de nuestro sistema de administración de casos donde puede elegir una fecha y hora disponibles, procesar el pago en línea y reservar su consulta. El calendario se basa en el orden de llegada y la disponibilidad de nuestro abogado. El abogado se comunicará con usted en la fecha y hora de su consulta. Si tiene alguna pregunta, puede enviarnos un correo electrónico a admin@islawfirm.com.co.
               </p>
             </div>
 

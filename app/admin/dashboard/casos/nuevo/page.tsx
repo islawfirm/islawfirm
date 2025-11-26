@@ -521,7 +521,7 @@ export default function NuevoCasoPage() {
                   value={formData.telefonoAbogado || ''}
                   onChange={(e) => handleInputChange('telefonoAbogado', e.target.value)}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B0000] focus:border-[#8B0000] outline-none"
-                  placeholder="(703) 527-1779"
+                  placeholder="+1 (804) 708-3837"
                 />
               </div>
             </div>

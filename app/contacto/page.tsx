@@ -89,10 +89,10 @@ export default function Contacto() {
                         Teléfono
                       </h3>
                       <a 
-                        href="tel:+17035271779" 
+                        href="tel:+18047083837" 
                         className="text-[#2C2C2C] text-lg hover:text-[#8B0000] transition-colors font-medium inline-flex items-center gap-2"
                       >
-                        (703) 527-1779
+                        +1 (804) 708-3837
                         <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -115,10 +115,10 @@ export default function Contacto() {
                         Correo Electrónico
                       </h3>
                       <a 
-                        href="mailto:law@islawfirm.com" 
+                        href="mailto:admin@islawfirm.com.co" 
                         className="text-[#2C2C2C] text-lg hover:text-[#8B0000] transition-colors font-medium inline-flex items-center gap-2 break-all"
                       >
-                        law@islawfirm.com
+                        admin@islawfirm.com.co
                         <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
