@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header className="bg-blue-100 fixed top-0 left-0 right-0 z-50 w-full">
       <nav className="w-full">
-        <div className="bg-[#8B0000] rounded-t-lg w-full">
+        <div className="bg-[#8B0000] w-full">
           <div className="flex items-center justify-between h-16 md:h-20 px-4 md:px-6 lg:px-8">
             {/* Logo */}
             <Link href="/" className="flex items-center flex-shrink-0">

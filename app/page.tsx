@@ -494,10 +494,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Botón Flotante Reservar Consulta */}
+      {/* Botón Flotante Reservar Consulta (solo visible en pantallas medianas en adelante para no chocar con "Revisar Estado" en móvil) */}
       <Link
         href="/reservar-consulta"
-        className="fixed right-6 bottom-6 md:right-8 md:bottom-8 z-50 bg-[#8B0000] hover:bg-[#9B0000] text-white font-semibold py-4 px-6 md:py-5 md:px-8 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 flex items-center gap-3 group"
+        className="hidden md:flex fixed right-6 bottom-6 md:right-8 md:bottom-8 z-50 bg-[#8B0000] hover:bg-[#9B0000] text-white font-semibold py-4 px-6 md:py-5 md:px-8 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 items-center gap-3 group"
       >
         <span className="text-base md:text-lg">Reservar Consulta</span>
         <svg className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
